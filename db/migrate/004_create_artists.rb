@@ -1,6 +1,8 @@
-class AddActorsName < ActiveRecord::Migration[5.1]
+class CreateArtists < ActiveRecord::Migration[5.1]
   def change
-    add_column :artists, :first_name, :string 
-    add_column :artists, :last_name, :string 
+    create_table :artists do |t|
+      t.string = :first_name
+      t.string = :last_name 
+    end 
   end 
 end 
