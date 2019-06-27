@@ -1,6 +1,8 @@
-class AddCharactersNameAndId < ActiveRecord::Migration[5.1]
+class CreateCharacters < ActiveRecord::Migration[5.1]
   def change 
-    add_column :characters, :name, :string 
-    add_column :characters, :show_id, :integer 
+    create_table :characters do |t|
+      t.string :name 
+      t.integer :show_id 
+    end 
   end 
 end 
